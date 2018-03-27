@@ -46,11 +46,12 @@ $(function () {
     });
 
     describe("Initial Entries", function () {
+        var $entries;
 
         //   ensures when the loadFeed function is called and completes its work, there is at least a 
         //   single .entry element within the .feed container. 
         beforeEach(function (done) {
-            initialEntries = $('.entry');
+            // initialEntries = $('.entry');
             loadFeed(0, function () {
                 try {
                     $entries = $('.entry');
@@ -66,9 +67,12 @@ $(function () {
         });
     });
 
-    describe("New Feed Selection", function () {
+    describe("New Feed Selection", function() {
+        var $entries;
+        var $newEntries;
         // asyncronously loads 2 feeds
         beforeEach(function (done) {
+            // this doesn't work
             loadFeed(0, function () {
                 try {
                     $entries = $('.entry');
@@ -88,8 +92,8 @@ $(function () {
 
         // ensures when a new feed is loaded by the loadFeed function that the content actually changes.
         // the two necessary async calls to loadFeed are handled in the beforeEach function above
-        it("loads new content", function () {
-            expect($($entries[0]).innerText !== $($newEntries[0]).innerText);
+        it("loads new content", function() {
+            expect($entries[0].innerText !== $newEntries[0].innerText).toBe(true);
         });
 
     });
