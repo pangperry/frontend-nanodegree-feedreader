@@ -99,10 +99,3 @@ $(function () {
 
     });
 }());
-
-
-
-
-
-
-///LOOK AT HOW LOADFEED WAS USED IN THE main app, and rethink the tests (at least the last one or two)
