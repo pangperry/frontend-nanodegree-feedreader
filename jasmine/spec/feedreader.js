@@ -64,7 +64,7 @@ $(function () {
         });
 
         it("has at least one entry when loadFeed completes", function () {
-            expect($entries.length > 0).toBe(true);
+            expect($entries.length).toBeGreaterThan(0);
         });
     });
 
