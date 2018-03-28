@@ -94,7 +94,7 @@ $(function () {
         // ensures when a new feed is loaded by the loadFeed function that the content actually changes.
         // the two necessary async calls to loadFeed are handled in the beforeEach function above
         it("loads new content", function() {
-            expect($entries[0].innerText !== $newEntries[0].innerText).toBe(true);
+            expect($entries).not.toBe($newEntries);
         });
 
     });
