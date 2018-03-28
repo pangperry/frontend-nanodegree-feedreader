@@ -42,6 +42,7 @@ $(function () {
             $menu.trigger('click');
             expect($(document.body).hasClass('menu-hidden')).toBe(false);
             $menu.trigger('click');
+            expect($(document.body).hasClass('menu-hidden')).toBe(true);
         });
     });
 
