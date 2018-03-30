@@ -55,7 +55,7 @@ $(function () {
             // initialEntries = $('.entry');
             loadFeed(0, function () {
                 try {
-                    $entries = $('.entry');
+                    $entries = $('.feed .entry');
                     done();
                 } catch (e) {
                     done.fail(e);
