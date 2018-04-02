@@ -73,7 +73,6 @@ $(function () {
         var $newEntries;
         // asyncronously loads 2 feeds
         beforeEach(function (done) {
-            // this doesn't work
             loadFeed(0, function () {
                 try {
                     $entries = $('.entry');
@@ -94,7 +93,7 @@ $(function () {
         // ensures when a new feed is loaded by the loadFeed function that the content actually changes.
         // the two necessary async calls to loadFeed are handled in the beforeEach function above
         it("loads new content", function() {
-            expect($entries).not.toBe($newEntries);
+            expect($entries.html()).not.toBe($newEntries.html());
         });
 
     });
